@@ -1,28 +1,44 @@
 body
 {
-  background:      ;/* couleur du fond */
+  background: white ;/* couleur du fond */
   font-family: "Arial", sans-serif; /*définition de la police d'écriture*/
-  color: ;      /*définition de la ouleur de la police*/
+  color: #181818 ;      /*définition de la ouleur de la police*/
+}
+.grille1
+{
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+  "h h h"
+  "b b b"
+  "ar ar ar";
 }
 
 header
 {
-
+  grid-area: h ;
+  display: flex ;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .banniere
 {
-
+grid-area: b b b;
 }
 
 article
 {
-    margin-left: 16px;
+  grid-area: ar;
+  margin-left: 1rem;
+  color: black;
 }
 
 aside
 {
-    margin-right: 16px;
+  grid-area: as;
+  margin-right: 3rem;
 }
 
 footer
@@ -51,17 +67,20 @@ header h1, article h1, nav a
 {
     font-size: 24px;
     margin: 16px;
+
 }
 
 nav ul
 {
     list-style-type: none;
+    display: inline;
+
 
 }
 
 nav li
 {
-    margin-right: 10px;
+
 }
 
 nav a
